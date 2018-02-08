@@ -77,7 +77,7 @@ resource "aws_lb_cookie_stickiness_policy" "default" {
 
 resource "aws_instance" "web" {
   instance_type     = "t2.micro"
-  count             = "4"
+  count             = "6"
   availability_zone = "${element(var.azs,count.index)}"
 
   # Lookup the correct AMI based on the region we specified
